@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
-import {ApolloProvider} from '@apollo/react-components'
+// import {ApolloProvider} from '@apollo/react-components'
 
 import {
   ApolloClient,
   InMemoryCache,
-  // ApolloProvider,
+  ApolloProvider,
   createHttpLink,
 } from '@apollo/client';
 
@@ -36,7 +36,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-    <div>
+    {/* <div> */}
     <Router>
       <>
         <Navbar />
@@ -47,9 +47,10 @@ function App() {
         </Switch>
       </>
     </Router>
-    </div>
+    {/* </div> */}
     </ApolloProvider>
   );
 }
 
 export default App;
+

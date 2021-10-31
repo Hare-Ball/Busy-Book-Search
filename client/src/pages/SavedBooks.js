@@ -13,7 +13,7 @@ const SavedBooks = () => {
 const infoQuery = useQuery(GET_ME)
 console.log(infoQuery)
 const userData = infoQuery.data?.me || {}
-const [removeBook, {error}] = useMutation(REMOVE_BOOK)
+const [removeBook] = useMutation(REMOVE_BOOK)
   // use this to determine if `useEffect()` hook needs to run again
   // const userDataLength = Object.keys(userData).length;
 
